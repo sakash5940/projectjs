@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .chains img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="chains alljewellery">
+        <div>
+<img src="https://images.meesho.com/images/products/121493700/u5xk7_512.webp" alt="">
+<p>price 500</p>
+        </div>
+<div>
+<img src="https://m.media-amazon.com/images/I/910gathXBvL._AC_UY1100_.jpg" alt="">
+<p>price 300</p>
+</div>
+<div>
+    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/necklace-chain/d/w/s/1-1-gram-gold-stylish-party-daily-wear-silver-golden-design-original-imagq9bpjuzqrmf7.jpeg?q=20&crop=false" alt="">
+<p>price 600</p>
+</div>
+<div>
+<img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/necklace-chain/j/c/p/1-1-gram-gold-stylish-party-daily-wear-silver-golden-design-original-imagq2zyvtthgbhu.jpeg?q=20&crop=false" alt="">
+<p>price 700</p>
+</div>
+<div>
+<img src="https://rukminim2.flixcart.com/image/850/1000/kx0q4y80/necklace-chain/t/w/c/1-ff30355-chain-fashion-frill-original-imag9kjyqjq3frz7.jpeg?q=90&crop=false" alt="">
+    <p>price 500</p>
+</div>
+<div>
+<img src="https://rukminim2.flixcart.com/image/720/864/kr0ynbk0/necklace-chain/e/p/2/ka-09-chain-atisundar-original-imag4ww49kcxzhgv.jpeg?q=60&crop=false" alt="">
+<p>ptice 600</p>
+</div>
+    </div>
+    <script>
+        document.querySelectorAll(".chains img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

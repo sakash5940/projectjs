@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .earrings img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="earrings alljewellery">
+<div>
+<img src="https://www.amnmicrocovering.com/image/cache/catalog/Earrings1/erg2037-attractive-marriage-bridal-2-gram-yellow-gold-earrings-1-850x1000.jpg.webp" alt="">
+<p>price 500</p>
+</div>
+<div>
+<img src="https://gehnashop.com/cdn/shop/files/gold-plated-traditional-antique-golden-chandbali-earrings-for-weddings-gehna-shop-traditional-earrings-for-weddings-buy-online-41752734171451.jpg?v=1688008161" alt="">
+<p>price 800</p>
+</div>
+<div>
+<img src="https://www.chidambaramgoldcovering.com/image/cache/catalog/ChidambaramGoldCovering/earrings/er2845-premium-antique-lakshmi-peacock-design-jimiki-earring-green-ruby-stone-traditional-wear-1-850x1000.jpg" alt="">
+<p>price 1000</p>
+</div>
+<div>
+<img src="https://www.chidambaramgoldcovering.com/image/cache/catalog/ChidambaramGoldCovering/earrings/er2413-new-lakshmi-design-antique-jhumki-earing-with-green-ruby-stones-for-ladies-1-850x1000.jpg" alt="">
+<p>price 900</p>
+</div>
+<div>
+<img src="https://i.pinimg.com/736x/d6/3c/74/d63c74cae03bacbd799816abedfb236b.jpg" alt="">
+<p>price 1100</p>
+</div>
+<div>
+<img src="https://www.jewelsmart.in/pub/media/catalog/product/b/r/bridal-gold-jhumka-design-fabulous-artificial-jewellery-jewelsmart-2033.jpg" alt="">
+<p>price 700</p>
+</div>
+    </div>
+    <script>
+        document.querySelectorAll(".earrings img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

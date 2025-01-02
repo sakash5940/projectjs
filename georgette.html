@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .georgette img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="georgette allsarees">
+        <div>
+            <img src="https://sudathi.com/cdn/shop/files/3432S301_4.jpg?v=1705381446&width=1500" alt="">
+<p>price 650</p>
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/8103Txty1+L._AC_UY350_.jpg" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+            <img src="https://www.vishalprints.in/cdn/shop/files/AARADHYA-50671-01_8bce9958-3d0a-4254-a9f6-d92b40c16659.jpg?v=1719108495" alt="">
+<p>price 600</p>
+        </div>
+        <div>
+            <img src="https://monamaar.com/cdn/shop/products/h1_228119fc-1850-40b9-a1dd-00afd3aa1f4f.jpg?v=1657888236" alt="">
+<p>price 850</p>
+        </div>
+        <div>
+            <img src="https://singhanias.in/cdn/shop/files/404344_1.jpg?v=1717143401" alt="">
+<p>price 700</p>
+        </div>
+        <div>
+            <img src="https://www.fabfunda.com/product-img/pure-georgette-saree-in-moti-l-1721049485.jpeg" alt="">
+<p>price 900</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".georgette img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

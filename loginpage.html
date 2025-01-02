@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign Up</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden; /* Prevent scrolling */
+      background:olive; /* Beautiful gradient background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+    .container {
+      position: fixed;
+      width: 350px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+
+    .container input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .container input:focus {
+      border-color: #2575fc;
+      outline: none;
+      box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+    }
+
+    .container button {
+      background-color: #2575fc;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .container button:hover {
+      background-color: #6a11cb;
+    }
+
+    .container p {
+      margin-top: 10px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .container p a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="loginPage">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="handleLogin()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+  </div>
+
+  <div class="container" id="signUpPage" style="display: none;">
+    <h2>Sign Up</h2>
+    <input type="email" id="signUpEmail" placeholder="Email">
+    <input type="password" id="signUpPassword" placeholder="Password">
+    <button onclick="handleSignUp()">Sign Up</button>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+
+  <script>
+    // Show sign-up page
+    function showSignUp() {
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('signUpPage').style.display = 'block';
+    }
+
+    // Show login page
+    function showLogin() {
+      document.getElementById('signUpPage').style.display = 'none';
+      document.getElementById('loginPage').style.display = 'block';
+    }
+
+    // Handle login
+    function handleLogin() {
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value.trim();
+
+      if (!email || !password) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Validation Error',
+          text: 'Both fields are required!',
+        });
+        return;
+      }
+
+      const storedUser = JSON.parse(localStorage.getItem('user'));
+
+      if (storedUser && storedUser.email === email && storedUser.password === password) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Login Successful',
+          text: 'Welcome back!',
+        }).then(() => {
+          // Redirect to project2.html after successful login
+          window.location.href = 'project2.html';
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Login Failed',
+          text: 'Invalid email or password!',
+        });
+      }
+    }
+
+    // Handle sign-up
+    function handleSignUp() {
+      const email = document.getElementById('signUpEmail').value.trim();
+      const password = document.getElementById('signUpPassword').value.trim();
+
+      if (!email || !password) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Validation Error',
+          text: 'Both fields are required!',
+        });
+        return;
+      }
+
+      const storedUser = JSON.parse(localStorage.getItem('user'));
+
+      if (storedUser && storedUser.email === email) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Sign Up Failed',
+          text: 'User already exists. Please login!',
+        });
+      } else {
+        localStorage.setItem('user', JSON.stringify({ email, password }));
+        Swal.fire({
+          icon: 'success',
+          title: 'Account Created',
+          text: 'You can now login!',
+        }).then(() => {
+          showLogin();
+        });
+      }
+    }
+  </script>
+</body>
+</html>

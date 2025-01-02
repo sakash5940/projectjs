@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .choker img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="choker alljewellery">
+        <div>
+            <img src="https://www.shreevinayakjewellers.com/live/img/business_product/aTX7vmuD7f_20201212111209.jpg" alt="">
+<p>price 500</p>
+        </div>
+        <div>
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/JK/MK/VD/115894897/green-chokar-gale-ka-haar-500x500.jpg" alt="">
+<p>price 600</p>
+        </div>
+        <div>
+            <img src="https://assets0.mirraw.com/images/9161131/20210623_121205_zoom.jpg?1624456349" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST1CEuhDvm5s6Tjufv0imtzL_lGPUdJBVYRw&s" alt="">
+<p>price 700</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/necklace-chain/u/b/c/1-1-choker-chokar-set-original-imagwgfvygjrnk9s.jpeg?q=90&crop=false" alt="">
+<p>price 900</p>
+        </div>
+        <div>
+            <img src="https://images.meesho.com/images/products/396086518/nqqgt_512.webp" alt="">
+<p>price 1000</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".choker img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

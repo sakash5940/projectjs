@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .necklaces img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="necklaces alljewellery">
+        <div>
+            <img src="https://www.chidambaramgoldcovering.com/image/cache/catalog/ChidambaramGoldCovering/necklace/nckn2256-new-gold-necklace-with-ruby-stone-for-ladies-one-gram-gold-jewellery-1-221x260.jpg" alt="">
+<p>price 600</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2b-glv2Cztj4jEmzHKsC0olyzF3Fhyqfgtw&s" alt="">
+<p>price 700</p>
+        </div>
+        <div>
+            <img src="https://kameswarijewellers.in/wp-content/uploads/sites/494/2022/12/NL-2395-1.png" alt="">
+<p>price 1200</p>
+        </div>
+        <div>
+<img src="https://www.amnmicrocovering.com/image/cache/catalog/Necklace/nlc918-new-model-pure-gold-plated-lakshmi-design-uncut-diamond-stone-necklace-with-earrings-set-for-wedding-2-850x1000.jpg.webp" alt="">
+<p>price 1000</p>
+        </div>
+        <div>
+            <img src="https://d25g9z9s77rn4i.cloudfront.net/uploads/product/312/1659013251_ce18167be7daa7b3e45e.jpg" alt="">
+<p>price 1100</p>
+        </div>
+        <div>
+<img src="https://www.wholesalecovering.com/image/cache/catalog/Necklace/nlc831-new-model-party-wear-temple-necklace-with-earring-temple-jewellery-set-buy-online-1-850x1000.jpg.webp" alt="">
+<p>price 800</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".necklaces img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

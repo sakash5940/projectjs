@@ -1,0 +1,413 @@
+body{
+     background-image: url("https://images.indianweddingsaree.com/tr:w-540/AlternateView/1569504/1569504-A5.jpg"); 
+    background-repeat: no-repeat ;
+    background-size: cover;
+}
+#title
+{
+    font-style: oblique;
+    text-align: center;
+    font-size: 35px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 1%;
+    background-color: olive;
+    align-items: center;
+
+}
+.nav_part1{
+    display: flex;
+    gap: 7vw;
+}
+.nav_part1 a{
+    text-decoration:none;
+    color:black;
+    font-size: 32px;
+}
+#search-bar
+{
+    width: 25vw;
+    height: 5vh;
+    font-size: 25px;
+}
+#section1
+{
+    display: flex;
+    gap: 4vw;
+    border: 3px solid black ;
+    border-radius: 2%;
+}
+#section1 h1 {
+    color:red;
+    font-style: italic;
+    text-transform: capitalize;
+    text-align: center;
+}
+#section1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#section1 li{
+    font-size: 32px;
+}
+.types-of-sarees{
+    width: 45vw;
+}
+.blousecollection{
+    width: 25vw;
+}
+.jewellery
+{
+    width: 25vw;
+}
+#section2 {
+    border: 3px solid black;
+    display: flex;
+    margin-top: 1%;
+    justify-content:space-evenly;
+border-radius:2%;
+} 
+ #section2 h1 {
+    color: blue;
+    font-style: italic;
+    text-transform: capitalize;
+}
+#section1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4vw;
+    row-gap: 1vw;
+}
+#section1 li{
+    width: 16vw;
+    font-size: 32px;
+
+}
+.newarrivals ul{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4vw;
+    row-gap: 1vw;
+}
+.aboutus{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+.aboutus h2{
+    padding: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.aboutus img{
+    padding: 60px; 
+}
+   footer {
+    background-color:rgb(200, 33, 33);
+    color: black;
+    padding: 20px;
+    font-size: 30px;
+    border: 1px solid black;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    font-size: medium;
+}
+
+footer h2, footer h5 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: black;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f39c12;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer .social-icons a {
+    color:black;
+    margin-right: 10px;
+    font-size: 25px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+footer .footer-links p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: medium;
+}
+
+footer .footer-links p i {
+    margin-right:10px;
+    color: black;
+}
+
+footer .text-center {
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+ footer .text-center p {
+    margin: 0;
+    font-size: medium;
+ }  
+/* Responsive Styling */
+ @media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .container > div {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    footer .social-icons {
+        justify-content: center;
+    }  
+} 
+#section1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.types-of-sarees, .blousecollection, .jewellery {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #ff6347;
+    color:red;
+    border-color: #ff6347;
+}
+
+ul li:active {
+    background-color: #d45c3b;
+    border-color: #d45c3b;
+}
+
+ul li:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+ul li:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+ul li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .types-of-sarees, .blousecollection, .jewellery {
+        width: 45%;
+    }
+    #section1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    .types-of-sarees, .blousecollection, .jewellery {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .types-of-sarees, .blousecollection, .jewellery {
+        width: 100%;
+    }
+    #section1 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    ul li {
+        font-size:15px !important;
+    }
+    .aboutus{
+        flex-wrap: wrap;
+    }
+    .aboutus img{
+
+        height: 400px;
+
+    }
+    .sareeimg img{
+        height: 400px;
+    }
+    #section2{
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1023px) {
+    .blousecollection, .jewellery {
+        width: 20%;
+    }
+    .types-of-sarees
+    {
+        width: 44%;
+    }
+    #section1 {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+}
+
+/* Basic styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:olive;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.nav_part1 a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.nav_part1 a:hover {
+    text-decoration: underline;
+}
+
+.search-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-container input {
+    padding: 5px;
+    font-size: 16px;
+    width: 70%;
+    max-width: 400px;
+}
+
+.cart img {
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+.nav_part1 {
+    display: flex;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav_part1 {
+        display: none;
+        flex-direction: column;
+        background-color: olive;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;/
+    }
+    .nav_part1 a{
+        font-size: 20px;
+       
+    }
+
+    .nav_part1 a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav_part1.active {
+        display: flex;
+    }
+}
+

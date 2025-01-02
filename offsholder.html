@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .halfsholder img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="halfsholder allblouses">
+        <div>
+            <img src="https://pothysdress.s3.ap-south-1.amazonaws.com/1270269589_img3.jpg" alt="">
+<p>price 500</p>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/BJ/GG/MY-2378268/2-benazir-label_-500x500.jpg" alt="">
+<p>price 450</p>
+        </div>
+        <div>
+            <img src="https://www.waliajones.com/cdn/shop/files/SH-732.jpg?v=1691091729" alt="">
+<p>price 300</p>
+        </div>
+        <div>
+            <img src="https://assets.ajio.com/medias/sys_master/root/20240404/Ni81/660e953b05ac7d77bbf5dcc6/-288Wx360H-467227934-black-MODEL.jpg" alt="">
+<p>price 400</p>
+        </div>
+        <div>
+            <img src="https://assets.ajio.com/medias/sys_master/root/20240416/SCxa/661e84b405ac7d77bb0f360a/-473Wx593H-467230013-maroon-MODEL.jpg" alt="">
+<p>peice 450</p>
+        </div>
+        <div>
+            <img src="https://img2.ogaanindia.com/pub/media/catalog/product/cache/3f6619daccdb194398d06464ab49fa6e/1/_/1_79319.jpg" alt="">
+<p>price 480</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".halfsholder img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

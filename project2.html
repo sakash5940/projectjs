@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <script src="project2.js"></script>
+<nav>
+    <div class="nav_part1">
+        <a href="#home">Home</a>
+        <a href="#section1">Products</a>
+    </div>
+    <div class="search-container">
+        <form role="search"  onsubmit="search(); return false;">
+            <input type="search" id="search-bar" placeholder="Search here..." onkeyup="filterList()">
+        </form>
+    </div>
+    <div class="nav_part1">
+        <a href="#contact us">Contact us</a>
+        <a href="#about us">About us</a>
+    </div>
+    <div class="cart">
+        <img onclick="homecart()" src="./cart-shopping-fast-svgrepo-com.png" alt="cart" height="55">
+    </div>
+
+    <!-- Hamburger Menu for Mobile -->
+    <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+  </div>
+</nav>
+
+<div class="sareeimg">
+  <img src="./Purple And Yellow Modern Indian Bridal Saree Sale YouTube Thumbnail  (1).png" width="100%" height="800px"
+  alt="">
+</div>
+    <div id="section1">
+        <div class="types-of-sarees">
+            <h1>Saree Collections</h1>
+            <ul>
+                <li onclick="pattu()">Pattu saree</li>
+                <li onclick="fancy()">Fancy saree</li>
+                <li onclick="kuppadam()">Kuppadam saree</li>
+                <li onclick="uppadam()">Uppadam saree</li>
+                <li onclick="organza()">Organza</li>
+                <li onclick="banaras()">Banaras saree</li>
+                <li onclick="gadwal()">Gadwal saree</li>
+                <li onclick="bandhani()">Bandhani saree</li>
+                <li onclick="kanjeevaram()">Kanjeevaram Saree</li>
+                <li onclick="dharmavaram()">Dharmavaram</li>
+                <li onclick="patola()">Patola Saree</li>
+                <li onclick="cotton()">cotton sarees</li>
+                <li onclick="pochampally()">Pochampally saree </li>
+                <li onclick="mysore()">Mysore Silk</li>
+                <li onclick="kanchipuram()">Kanchipuram Silk </li>
+                <li onclick="georgette()">Georgette Saree</li>
+            </ul>
+        </div>
+        <div class="blousecollection">
+            <h1>Blouse Collection</h1>
+            <ul>
+                <li onclick="contrasts()">Contrasts Blouses</li>
+                <li onclick="muggam()">Muggam Blouses</li>
+                <li onclick="mirror()">Mirror Blouses</li>
+                <li onclick="readymade()">Readymade</li>
+                <li onclick="fullhands()">Fullhands Blouses</li>
+                <li onclick="net()">Net Blouses</li>
+                <li onclick="offsholder()">Off sholder Blouses</li>
+                <li onclick="boatneck()">Bot neck Blouses</li>
+            </ul>
+        </div>
+        <div class="jewellery">
+            <h1>Jewellery Collection</h1>
+            <ul>
+                <li onclick="necklaces()">Necklaces</li>
+                <li onclick="longhar()">Long har</li>
+                <li onclick="choker()">Choker</li>
+                <li onclick="earrings()">Earrings</li>
+                <li onclick="chains()">Chains</li>
+                <li onclick="bangles()">Bangles</li>
+                <li onclick="rings()">Rings</li>
+                <li onclick="waistbelt()">Waist belt</li>
+            </ul>
+        </div>
+    </div>
+    <div id="section2">
+        <h1 onclick="newarrivals()"> newarrivals</h1>
+        <h1 onclick="occassions()"> occassions</h1>
+        <h1 onclick="fabrics()"> fabrics</h1>
+        <h1 onclick="colours()"> colours</h1>
+    </div>
+
+
+    <div id="about us">
+    <h1>About Us</h1>
+        <div class="aboutus">
+            <div>
+            <img src="https://media.istockphoto.com/id/1270784859/photo/pretty-indian-young-hindu-bride-in-studio-shot.jpg?s=612x612&w=0&k=20&c=FabLzRXWCWlRxAARmFhSd9wk6glfR093a8pG13gwQrw="  alt=""> 
+            </div>
+            <div>
+            <h2 >
+                Welcome to Shreshta Sarees, where tradition meets elegance. We are a dedicated boutique offering an exquisite collection of sarees that capture the essence of Indian culture and craftsmanship. With a passion for bringing timeless beauty into your wardrobe, our carefully curated selection showcases a variety of sarees for every occasion—from grand weddings to everyday celebrations.
+
+At Shreshta Sarees, we believe in quality and authenticity. Our sarees are handpicked from the finest fabric, with intricate designs and vibrant colors that reflect the diversity and richness of Indian heritage. Whether you are looking for a classic Kanjivaram, a stylish Banarasi, or a contemporary designer piece, we offer something for every taste and style.
+
+Our mission is to provide each customer with an exceptional shopping experience, helping you find the perfect saree that makes you feel confident and beautiful. Our team is always here to guide you with personalized service, ensuring you leave with a saree that resonates with your unique personality.
+
+Thank you for choosing Shreshta Sarees—where every saree tells a story of elegance, tradition, and grace.
+        </h2>
+    </div>
+      </div>
+    </div>
+
+</body>
+<footer style="background-color:olive;">
+  <div id="contact us">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1: Food-related links -->
+        <div class="col-md-4">
+          <h2>Shreshta Sarees World</h2>
+          <a href="#home">Home</a>
+          <a href="#section1">products</a>
+            <a href="#about us">About Us</a>
+            <a href="#contact us">Contact Us</a>
+          </div>
+        </div>
+        <!-- Column 2: Social Media Icons -->
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <!-- Column 3: Contact Information -->
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <div class="footer-links">
+            <p><i class="fas fa-map-marker-alt"></i> Malegaon,Bhainsa 504103</p>
+            <p><i class="fas fa-
+              phone"></i> +91 7995544091</p>
+            <p><i class="fas fa-envelope"></i>akashpatil5940@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom -->
+      <div class="text-center mt-4">
+        <p>&copy; 2024 shreshta sarees world. All rights reserved.</p>
+      </div>
+    </div>
+    </footer>
+</html>

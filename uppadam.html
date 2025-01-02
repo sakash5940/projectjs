@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .uppadam img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="uppadam allsarees">
+        <div>
+            <img src="https://shilpaweaves.com/cdn/shop/products/pochampally_sarees_39_f82c8f05-8653-4a33-9ffc-c6775e50270b.jpg?v=1703227180" alt="">
+<p>price 980</p>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/ECOM/Default/2023/12/370643955/PX/ZD/PC/107735617/pochampally-sarees-3-f25b5260-e9f5-4e62-accb-43fe675cb1b2-500x500.jpg" alt="">
+<p>price 980</p>
+        </div>
+        <div>
+            <img src="https://www.tapathi.com/pub/media/catalog/product/cache/e5c5a84ca7200b1fdddd537435eb2f91/s/h/shivaikkat9887.jpg" alt="">
+<p>price 1050</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/564x/0e/c2/82/0ec2822d50c428637210d6e69a70f3d7.jpg" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/ANDROID/Default/2020/9/LA/BG/CC/77959113/product-jpeg.jpg" alt="">
+<p>price 850</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/736x/dd/33/4d/dd334d2090d21e9239412ffc558665de.jpg" alt="">
+            <p>price 900</p>
+
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".uppadam img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

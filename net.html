@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .net img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="net allblouses">
+        <div>
+            <img src="https://5.imimg.com/data5/ANDROID/Default/2023/2/AC/UK/MI/36869744/product-jpeg-500x500.jpg" alt="">
+<p>price 650</p>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/9/OM/LW/LN/15377407/ladies-red-designer-net-blouse-500x500.jpg" alt="">
+<p>price 700</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/736x/22/b7/11/22b711b37b94ce41ac5c41a9e7d8bf01.jpg" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+<img src="https://cdn.sareeka.com/image/cache/data2023/blue-net-designer-blouse-273960-1-1000x1375.jpg" alt="">
+<p>price 750</p>
+        </div>
+        <div>
+            <img src="https://images.meesho.com/images/products/389753454/kcugh_512.jpg" alt="">
+<p>price 900</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/736x/5e/f0/60/5ef0608adb5f47c08069e4dbfe62f1ec.jpg" alt="">
+<p>price 1000</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".net img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+const paragraph = img.nextElementSibling;  
+const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

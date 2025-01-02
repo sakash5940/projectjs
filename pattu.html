@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Navigation</title>
+    <link rel="stylesheet" href="all.css">
+
+    <style>
+        .pattu img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+    
+<body>
+    <div class="pattu allsarees">
+        <div>
+        <img src="https://www.deepam.com/cdn/shop/articles/V8A2155_750x_330de574-6cc6-499e-a3eb-8cf3bff1d45f.webp?v=1725865853" alt="">
+        <p>price 2500 </p>
+        </div>
+        <div>
+        <img src="https://subhamgrand.in/cdn/shop/files/DSC2688.jpg?v=1686651633" alt="">
+<p>price 3200</p>
+        </div>
+        <div>
+        <img src="https://5.imimg.com/data5/BT/AO/SQ/SELLER-2462496/samudrika-pattu-sarees-1000x1000.jpg" alt="">
+<p>price 3800</p>
+        </div>
+        <div>
+        <img src="https://www.jyothisareemandir.com/cdn/shop/files/rn-image_picker_lib_temp_bbdb1abc-530a-4a56-bb9f-f52cae0fc10c.jpg?v=1710059646&width=1946" alt="">
+<p>price 2000</p>
+        </div>
+        <div>
+        <img src="https://m.media-amazon.com/images/I/81xz7IYn8dL._AC_UY1100_.jpg" alt="">
+<p>price 4000</p>
+        </div>
+<div>
+    <img src="https://images.wholesalesalwar.com/2023y/May/40728/Light-Pink-Soft-Silk-Traditional-Wear-Weaving-Saree-NARAYANPATTU-1.jpg" alt="">
+<p>price 2800</p>
+</div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".pattu img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+ 
+
+
+
+
+
+  

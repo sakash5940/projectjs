@@ -1,0 +1,181 @@
+body {
+    background-color: rgb(255, 136, 0);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.allsarees,
+.allblouses,
+.alljewellery,
+.sarees {
+    padding: 4vh 4vw;
+    display: flex;
+    gap: 2vw 8vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.allsarees img,
+.allblouses img,
+.alljewellery img,
+.sarees img {
+    height: 50vh;
+    width: 18vw;
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px;
+    transition: all 0.3s ease;
+}
+
+.allsarees img:hover,
+.allblouses img:hover,
+.alljewellery img:hover,
+.sarees img:hover {
+    border-radius: 5%;
+    transform: scale(1.04);
+    box-shadow: 0px 0px 4px 2px;
+}
+
+.allsarees p,
+.allblouses p,
+.alljewellery p,
+.sarees p,
+.Collection p {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    width: max-content;
+    padding: 3%;
+    margin-left: 4vw;
+    border: 1px solid black;
+}
+
+.allsarees p {
+    background-color: rgb(143, 18, 97);
+}
+
+.allblouses p {
+    background-color: rgb(25, 145, 61);
+}
+
+.alljewellery p {
+    background-color: rgb(26, 173, 51);
+}
+
+.Collection p {
+    background-color: rgb(95, 160, 113);
+}
+
+.Collection h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.sarees a {
+    color: black;
+    text-decoration: none;
+}
+
+.sarees {
+    border: 2px solid black;
+    gap: 50px;
+}
+
+.headings {
+    background-color: gold;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .allsarees img,
+    .allblouses img,
+    .alljewellery img,
+    .sarees img {
+        width: 22vw;
+        height: 45vh;
+    }
+
+    .allsarees p,
+    .allblouses p,
+    .alljewellery p,
+    .sarees p {
+        font-size: 24px;
+        margin-left: 3vw;
+    }
+
+    .allsarees,
+    .allblouses,
+    .alljewellery,
+    .sarees {
+        gap: 4vw 6vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: rgb(255, 136, 0);
+    }
+
+    .allsarees img,
+    .allblouses img,
+    .alljewellery img,
+    .sarees img {
+        width: 40vw;
+        height: 40vh;
+    }
+
+    .allsarees p,
+    .allblouses p,
+    .alljewellery p,
+    .sarees p {
+        font-size: 20px;
+        margin-left: 2vw;
+    }
+
+    .allsarees,
+    .allblouses,
+    .alljewellery,
+    .sarees {
+        gap: 4vw 6vw;
+    }
+
+    .Collection h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: rgb(255, 136, 0);
+    }
+
+    .allsarees img,
+    .allblouses img,
+    .alljewellery img,
+    .sarees img {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .allsarees p,
+    .allblouses p,
+    .alljewellery p,
+    .sarees p {
+        font-size: 16px;
+        margin-left: 0;
+        padding: 2%;
+    }
+
+    .allsarees,
+    .allblouses,
+    .alljewellery,
+    .sarees {
+        gap: 4vw 6vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Collection h1 {
+        font-size: 1.2em;
+    }
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .waistbelt img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="waistbelt alljewellery">
+<div>
+<img src="https://kameswarijewellers.in/wp-content/uploads/sites/494/2024/04/VDH-36-300x300.jpg" alt="">
+<p>price 2000</p>
+</div>
+<div>
+<img src="https://www.tanishq.co.in/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwa650eb2f/images/hi-res/51W1KPWZIAA88_1.jpg" alt="">
+<p>price 1500</p>
+</div>
+<div>
+<img src="https://www.violetandpurple.com/cdn/shop/files/7.2_1a58df5c-3757-43b0-8f13-f35b1be099db.jpg?v=1705150519" alt="">
+<p>price 1300</p>
+</div>
+<div>
+<img src="https://static.malabargoldanddiamonds.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/v/o/vodicdtrrga100.jpg" alt="">
+<p>price 2200</p>
+</div>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsCJ9sCu5XgtVnd3oTENWZ5884Xf4y0EDdWg&s" alt="">
+<p>price 1850</p>
+</div>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmkRNuyNPdpwJ4mOS7LK3ny9SkAAd57k_I2dWKQkMMvzUKvTDoXltSydToLp7qO00kJmg&usqp=CAU" alt="">
+<p>price 2000</p>
+</div>
+    </div>
+    <script>
+        document.querySelectorAll(".waistbelt img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .fancy img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="fancy allsarees">
+        <div>
+            <img src="https://www.anantexports.in/cdn/shop/products/WhatsAppImage2022-09-05at6.15.22PM_1070x.jpg?v=1662633973" alt="">
+<p>price 900</p>
+        </div>
+        <div>
+            <img src="https://images.wholesalesalwar.com/2023y/December/45703/Sky-Blue-Fancy-Reception-Wear-Zari-Embroidery-Saree-NOOR-8203.jpg" alt="">
+<p>price 1000</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQhvdQS_NSicuhd2cjB-iYoE4BnUPU6JMACeVGhzlgngkzY3yekHBPMbIb6YHz8g4oGXM&usqp=CAU" alt="">
+<p>price 1200</p>
+        </div>
+        <div>
+            <img src="https://assets2.andaazfashion.com/media/catalog/product/cache/1/image/800x1200/a12781a7f2ccb3d663f7fd01e1bd2e4e/t/e/teal-blue-silk-lace-embroidered-fancy-saree-sarv171389-1.jpg" alt="">
+<p>price 1300</p>
+        </div>
+        <div>
+            <img src="https://www.saree.com/media/catalog/product/cache/a2d512490f2b9958e6aa6a0385a10b9a/p/s/psadk3746d-light-blue-organza-cutdana-worked-saree_1.jpg" alt="">
+<p>price 1400</p>
+        </div>
+        <div>
+            <img src="https://images.glowroad.com/faceview/j9e/hj/jd/c9b/imgs/pd/1678042727595_02__1_-xlgn400x400.jpg?productId=P-12781509" alt="">
+<p>price 950</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".fancy img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

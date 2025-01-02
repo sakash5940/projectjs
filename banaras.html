@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .banaras img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="banaras allsarees">
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwvv6PjiJdMSigyyIpwhkeZeDUbSTp42zAxw&s" alt="">
+<p>price 1800</p>
+</div>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT-Er7hBJz0ZtYutRQlD8dIzlrtp7TNLBDqA&s" alt="">
+<p>price 2200</p>
+</div>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJqNxuJpZ9nv43B1qJFkLyge8Ho3cHg_pUXg&s" alt="">
+<p>price 2400</p>
+</div>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH6eU5Q2ym7AGMiPVZf-8jJts0pwbRQuwJ7g&s" alt="">
+<p>price 2000</p>
+</div>
+<div>
+<img src="https://cdn.rajwadi.com/image/cache/data/red-designer-wedding-wear-banarasi-silk-saree-45532-800x1100.jpg" alt="">
+<p>price 2600</p>
+</div>
+<div>
+<img src="https://www.parivarceremony.com/media/catalog/product/cache/62408a38a401bb86dbe3ed2f017b539f/f/2/f250206.jpg" alt="">  
+<p>price 2500</p>
+</div>
+ </div>
+ <script>
+     document.querySelectorAll(".banaras img").forEach(img => {
+        img.addEventListener("click", () => {
+            const imgSrc = img.src;
+
+const paragraph = img.nextElementSibling;  
+const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+        });
+     });
+    
+</script>
+</body>
+</html>

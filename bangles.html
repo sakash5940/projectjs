@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .bangles img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="bangles alljewellery">
+        <div>
+<img src="https://www.jewelsmart.in/media/catalog/product/l/i/lightweight-gold-bangles-design-copper-south-indian-jewelry-elegant-5115_1_1.jpg" alt="">
+<p>price 400</p>
+        </div>
+        <div>
+<img src="https://www.jewelsmart.in/media/catalog/product/cache/5e5d5507ad17a23dc9f1bc728eeab23c/2/0/201022-broad-leaf-design-one-gram-gold-bangles-jewelsmart-.jpg" alt="">
+<p>price 500</p>
+        </div>
+        <div>
+<img src="https://www.jewelegance.com/cdn/shop/files/JGS-2309-09172.jpg?v=1696394037" alt="">
+<p>price 450</p>
+        </div>
+        <div>
+<img src="https://www.griiham.in/cdn/shop/files/Gold-Plated-Studded-Set-of-2-bangles-Designer-Bangles-Griiham-2_4_ab8d2dc4-76b6-4a10-a82b-f4d8f821302d.jpg?v=1718452377" alt="">
+<p>1000</p>
+        </div>
+        <div>
+<img src="https://rankajewellers.in/cdn/shop/products/K7009.webp?v=1672319085" alt="">
+<p>price 900</p>
+        </div>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJlxCOTGGZ7CtNu9OtT7cFnZBQSLXyNuSL_w&s" alt="">
+<p>price 800</p>
+</div>
+    </div>
+    <script>
+        document.querySelectorAll(".bangles img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+const paragraph = img.nextElementSibling;  
+const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

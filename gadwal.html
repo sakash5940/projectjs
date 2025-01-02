@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gadwal img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+    <link rel="stylesheet" href="all.css">
+    <div class="gadwal allsarees">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoZD10EkHc7Dl-x6OvlxaLduO66c_Db3Ouqg&s" alt="">
+<p>price 1500</p>
+        </div>
+        <div>
+            <img src="https://assets.ajio.com/medias/sys_master/root/20230808/z8t4/64d243eaa9b42d15c9989573/-1117Wx1400H-466291886-green-MODEL.jpg" alt="">
+<p>price 1700</p>
+        </div>
+        <div>
+            <img src="https://kunbi.co.in/assets/upload/books/1695062593_IMG-20230918-WA0012.jpg" alt="">
+<p>price 1650</p>
+        </div>
+        <div>
+            <img src="https://keyasethexclusive.com/cdn/shop/files/RKS_9155_1080x1080.jpg?v=1705741902" alt="">
+<p>price 1350</p>
+        </div>
+        <div>
+            <img src="https://medias.utsavfashion.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/h/a/handloom-pure-silk-gadwal-saree-in-orange-and-pink-dual-tone-v1-stga449.jpg" alt="">
+<p>price 1450</p>
+        </div>
+        <div>
+            <img src="https://medias.utsavfashion.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/h/a/handloom-pure-silk-gadwal-saree-in-red-v1-stga444.jpg" alt="">
+<p>price 1400</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".gadwal img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+    
+</body>
+</html>

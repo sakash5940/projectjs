@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .contrasts img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="contrasts allblouses">
+        <div>
+            <img src="https://i.pinimg.com/736x/e1/00/4f/e1004f99a50d0c3f5f6d65b1467095f6.jpg" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+            <img src="https://static3.azafashions.com/tr:w-450/uploads/product_gallery/1683099-1-0012075001671201262.jpg" alt="">
+<p>price 750</p>
+        </div>
+        <div>
+<img src="https://uddupsilk.com/wp-content/uploads/2023/09/Types-of-Plain-Sarees-Suitable-for-Contrast-Blouses.jpg.webp" alt="">
+<p>price 500</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/1200x/4f/25/86/4f2586f505242ca9de80ea5f704b483d.jpg" alt="">
+<p>price 600</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/736x/4a/8c/d7/4a8cd7614074d30e9874fcd00891eb54.jpg" alt="">
+<p>price 650</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtefqjbQeuXjei9jmtBGVVoD_Av1r1QkYP3A&s" alt="">
+<p>price 450</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".contrasts img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .patola img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="patola allsarees">
+        <div>
+            <img src="https://mysilklove.com/cdn/shop/products/3_cb88d9d1-f6ff-48f3-92f6-fd078ea0944e.jpg?v=1655361955&width=2048"
+                alt="">
+            <p>price 1700</p>
+        </div>
+        <div>
+            <img src="https://mysilklove.com/cdn/shop/products/mslk1_304faf15-a8e5-4402-9a4f-f7d79d9595f3.jpg?v=1651151864&width=2048"
+                alt="">
+            <p>price 1600</p>
+        </div>
+        <div>
+            <img src="https://assets.panashindia.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/8/2885sr04-5504.jpg"
+                alt="">
+            <p>price 1750</p>
+        </div>
+        <div>
+            <img src="https://www.karagiri.com/cdn/shop/products/RANGEENPATOLA-1004_3.jpg?v=1669881624" alt="">
+            <p>price 1500</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYu430nUZ58EmSgDKsx3Dvm9NxUzjiYN_Uo1CiVtjJPsGGGcNb1aSM3VG8YNUprZ_C1e0&usqp=CAU"
+                alt="">
+            <p>price 1400</p>
+        </div>
+        <div>
+            <img src="https://assets2.andaazfashion.com/media/catalog/product/d/a/dark-green-silk-patola-saree-sarv153706-1.jpg"
+                alt="">
+            <p>price 1550</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".patola img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+                const paragraph = img.nextElementSibling;
+                const paragraphText = paragraph ? paragraph.textContent : "";
+
+                window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+
+</html>

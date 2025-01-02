@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .mysore img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="mysore allsarees">
+        <div>
+            <img src="https://vootbuy.in/cdn/shop/files/Beautiful_Pure_Mysore_silk_sarees_in_elegant_contrast_border_Silk_mark_certifiedNote-_Actual_colors_of_the_saree_may_slightly_vary_from_the_colors_in_the_image_due_to_camera_effects.F.jpg?v=1721640508" alt="">
+<p>price 1000</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7FjAoNWtUF80dlGN69bWRSZS4tj55A_2bpQ&s" alt="">
+<p>price980</p>
+        </div>
+        <div>
+            <img src="https://www.sudarshansaree.com/cdn/shop/files/MC13739239.jpg?v=1729604502" alt="">
+<p>price 950</p>
+        </div>
+        <div>
+            <img src="https://www.sudarshansaree.com/cdn/shop/files/MC13839169.jpg?v=1726399014" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+            <img src="https://wholetex.sgp1.cdn.digitaloceanspaces.com/full/rri-mysore-silk-saree-896.jpg" alt="">
+<p>price 850</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgBZqrZPUP5ifqRJroD8t1fCjuPZlAVEsdVLqo5vb4fjn_aV_P6KyCXRIie0K5Rza3c6I&usqp=CAU" alt="">
+<p>price 1050</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".mysore img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

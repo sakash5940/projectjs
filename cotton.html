@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .cotton img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="cotton allsarees">
+        <div>
+            <img src="https://mysilklove.com/cdn/shop/files/5_4a570fb6-f942-4354-be1d-ea28b4a539ea.jpg?v=1717505432&width=2048" alt="">
+<p>price 530</p>
+        </div>
+        <div>
+            <img src="https://byhand.in/cdn/shop/files/s1_95af9dff-3a45-47d5-99b8-b3515c9ee20d.jpg?v=1713939377" alt="">
+<p>price 700</p>
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/51aENVeDy9L._AC_UY350_.jpg" alt="">
+<p>price 750</p>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/5/304714720/TL/MI/JW/142530485/whatsapp-image-2023-05-01-at-19-41-15.jpeg" alt="">
+<p>price 600</p>
+        </div>
+        <div>
+            <img src="https://sudathi.com/cdn/shop/files/3391S295_1.jpg?v=1704784710&width=1500" alt="">
+<p>price 650</p>
+        </div>
+        <div>
+            <img src="https://maahishmati.com/cdn/shop/products/DoChidiyaSaree-BestsellingMaheshwariHandloomSarees-MaahishmatiSareesIndoreSnehalMishra_13.jpg?v=1666340475" alt="">
+<p>price 560</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".cotton img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

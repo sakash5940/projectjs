@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .fullhands img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="fullhands allblouses">
+        <div>
+            <img src="https://royskart.com/cdn/shop/files/7_57bc2d28-d3b1-4d1d-82ae-2fd16db71a73.jpg?v=1721629149" alt="">
+<p>price 480</p>
+        </div>
+        <div>
+<img src="https://www.monri.in/cdn/shop/files/TORI-GF-2.jpg?v=1709366566&width=1445" alt="">
+<p>price 350</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4QMpIoDPMB1zPl40KJDXMDSvs4H6YyNX05A&s" alt="">
+<p>price 350</p>
+        </div>
+        <div>
+<img src="https://indostrings.com/cdn/shop/products/IMG_20230114_000838_1024x1024@2x.jpg?v=1675862458" alt="">
+<p>price 450</p>
+        </div>
+        <div>
+<img src="https://m.media-amazon.com/images/I/51aBxoAsyfL._QL92_SH45_SR240,220_.jpg" alt="">
+<p>
+    price 500
+</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsBA_CAmvPp23ur2_WSjxh8G7UWLTMlKUoNQ&s" alt="">
+            <p>price 500</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".fullhands img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

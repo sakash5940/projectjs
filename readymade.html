@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .readymade img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class=" readymade allblouses">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-cPyWnMCepTrUbc01-NxM1KTVudYc9vXdlA&s" alt="">
+<p>price 250</p>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/ANDROID/Default/2023/12/368038809/HA/VS/LN/187287809/product-500x500.jpg" alt="">
+<p>price 500</p>
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/91+CsRMH7eL._AC_UY1100_.jpg" alt="">
+<p>price 400</p>
+        </div>
+        <div>
+            <img src="https://www.unnatisilks.com/cdn/shop/products/pkb392-1.jpg?v=1668257616&width=2048" alt="">
+<p>price 600</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKz0KFMQa8Fah0Dbe9dAUj4ORaJjPyNoOsCw&s" alt="">
+<p>price 450</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMlaWdOduXbU0drOHTW28tfhUHCNufjZXN9A&s" alt="">
+<p>price 350</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".readymade img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

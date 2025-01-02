@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .mirror img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="mirror allblouses">
+        <div>
+            <img src="https://i.ytimg.com/vi/8ayrpj4sQL8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBiMb-x85-rWMoUSCnPwlPHxPyhSw" alt="">
+<p>price 650</p>
+        </div>
+        <div>
+            <img src="https://i.etsystatic.com/23626974/r/il/0eadaf/2809146721/il_fullxfull.2809146721_peoy.jpg" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+            <img src="https://wholetex.sgp1.cdn.digitaloceanspaces.com/full/colourful-multy-thread-work-and-foil-mirror-work-blouse-3.jpg" alt="">
+<p>price 750</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/736x/ab/66/59/ab6659c489d9a936e582388c6115a516.jpg" alt="">
+<p>price 900</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/736x/ff/3e/a5/ff3ea5efc21c63c1140802b7a05047f0.jpg" alt="">
+<p>price 950</p>
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/41Z1vFqY-GL._AC_UY1100_.jpg" alt="">
+<p>price 800</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".mirror img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

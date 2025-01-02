@@ -1,0 +1,159 @@
+<!-- product.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-image {
+            max-width: 300px;
+            height: 400px;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .add-to-cart {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .buy-now {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            color: black;
+            font-size: 22px;
+            width: max-content;
+            padding: 0.5%;
+            margin-left: 45vw;
+            border: 1px solid black;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<!-- <body>
+    <h1>Product Details</h1>
+    <img id="product-image" class="product-image" src="" alt="Product">
+    <div class="buttons">
+        <p id="product-description"></p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const imgSrc = params.get("image");
+        const description = params.get("description");
+
+        const productImage = document.getElementById("product-image");
+        const productDescription = document.getElementById("product-description");
+
+        if (imgSrc) {
+            productImage.src = decodeURIComponent(imgSrc);
+        }
+        if (description) {
+            productDescription.textContent = decodeURIComponent(description);
+        }
+    </script>
+</body>
+
+</html> -->
+<body>
+    <h1>Product Details</h1>
+    <img id="product-image" class="product-image" src="" alt="Product">
+    <div class="buttons">
+        <p id="product-description"></p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+    </div>
+
+    <!-- Include SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Extract query parameters
+        const params = new URLSearchParams(window.location.search);
+        const imgSrc = params.get("image");
+        const description = params.get("description");
+    
+        // DOM elements
+        const productImage = document.getElementById("product-image");
+        const productDescription = document.getElementById("product-description");
+        const addToCartButton = document.querySelector(".add-to-cart");
+    
+        // Populate product details
+        if (imgSrc) {
+            productImage.src = decodeURIComponent(imgSrc);
+        }
+        if (description) {
+            productDescription.textContent = decodeURIComponent(description);
+        }
+    
+        // Add to Cart functionality
+        addToCartButton.addEventListener("click", () => {
+            // Create a cart item object with a quantity of 1
+            const cartItem = {
+                image: imgSrc,
+                description: description,
+                quantity: 1
+            };
+    
+            // Retrieve existing cart from localStorage
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+            // Check if the item already exists in the cart
+            const itemExists = cart.some(item => item.image === cartItem.image && item.description === cartItem.description);
+    
+            if (itemExists) {
+                // Display SweetAlert notification for duplicate item
+                Swal.fire({
+                    title: "Item Already in Cart",
+                    text: "This item is already in your cart.",
+                    icon: "warning",
+                    confirmButtonText: "OK"
+                });
+            } else {
+                // Add the new item to the cart with quantity
+                cart.push(cartItem);
+    
+                // Save updated cart back to localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+    
+                // Display SweetAlert notification for successfully adding item
+                Swal.fire({
+                    title: "Added to Cart",
+                    text: "The item has been added to your cart.",
+                    icon: "success",
+                    confirmButtonText: "OK"
+                });
+            }
+        });
+    </script>
+    
+</body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .kanchipuram img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="kanchipuram allsarees">
+        <div>
+            <img src="https://lajreedesigner.com/cdn/shop/files/B-Vipul-Shallvi-Silk-Red_2_1200x1200.jpg?v=1692953024" alt="">
+<p>price 1200</p>
+        </div>
+        <div>
+            <img src="https://zariknyaa.com/cdn/shop/files/1_bf506e6d-ebde-4498-a23e-3dbe6e3d3937.png?v=1699076224&width=1946" alt="">
+<p>price 1500</p>
+        </div>
+        <div>
+            <img src="https://mavuris.com/cdn/shop/products/Green_Kanchipuram_Silk_Sari_968161403.jpg?v=1649856177" alt="">
+<p>price 1800</p>
+        </div>
+        <div>
+            <img src="https://mysilklove.com/cdn/shop/files/MSld1_9ca7afa6-5de5-4791-a892-dc5a37a39e89.jpg?v=1688104659&width=2048" alt="">
+<p>price 1600</p>
+        </div>
+        <div>
+            <img src="https://medias.utsavfashion.com/media/catalog/product/cache/1/image/500x/040ec09b1e35df139433887a97daa66f/k/a/kanchipuram-art-kanchipuram-linen-silk-saree-in-olive-green-v1-snga5541.jpg" alt="">
+<p>price 1300</p>
+        </div>
+        <div>
+            <img src="https://medias.utsavfashion.com/media/catalog/product/cache/1/image/500x/040ec09b1e35df139433887a97daa66f/k/a/kanchipuram-saree-in-fuchsia-v2-shja125.jpg" alt="">
+<p>price 1700</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".kanchipuram img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

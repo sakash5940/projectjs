@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .kanjeevaram img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="kanjeevaram allsarees">
+        <div>
+            <img src="https://amrut.co/cdn/shop/files/RedPureKanjivaramSilkSareeforBride-01.jpg?v=1711450386" alt="">
+<p>price 2500</p>
+        </div>
+        <div>
+            <img src="https://assets.ajio.com/medias/sys_master/root/20231025/7wf2/65386e42ddf7791519564fcf/-473Wx593H-466696303-red-MODEL.jpg" alt="">
+<p>price 2300</p>
+        </div>
+        <div>
+            <img src="https://www.zilikaa.com/cdn/shop/files/I-1_90a0172c-71cf-4b8a-896f-e0a919f30456_800x.jpg?v=1708583747" alt="">
+<p>price 2000</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0lDy_ST_8-P8S6MDfKtf5_h3Zr6B9E9Buew&s" alt="">
+<p>price 2100</p>
+        </div>
+        <div>
+            <img src="https://content-d11d.kxcdn.com/media/catalog/product/cache/72e404cee8a49d1e1e3570594db2c785/a/d/adi458.8682.jpg" alt="">
+<p>price 1950</p>
+        </div>
+        <div>
+            <img src="https://content-d11d.kxcdn.com/media/catalog/product/cache/72e404cee8a49d1e1e3570594db2c785/a/d/adi458.8669.jpg" alt="">
+<p>price 2200</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".kanjeevaram img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

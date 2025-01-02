@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .longhar img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="longhar alljewellery">
+        <div>
+            <img src="https://www.wholesalecovering.com/image/cache/catalog/Haram/hrm930-traditional-long-kerala-haram-design-for-wedding-1-850x1000.jpg.webp" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+            <img src="https://lumibellafashion.co.in/cdn/shop/files/peacocklongharam-lumibellafashion.jpg?v=1717551402" alt="">
+<p>price 1300</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/736x/9b/ba/b5/9bbab53d011a404b678e6d3c5b2ed2a3.jpg" alt="">
+<p>price 1500</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/originals/1d/49/c3/1d49c3ce215a6bbdba141ba03db42d7a.jpg" alt="">
+<p>price 1700</p>
+        </div>
+        <div>
+            <img src="https://www.chidambaramgoldcovering.com/image/cache/catalog/ChidambaramGoldCovering/Harams/hr2565-traditional-lord-murugan-design-ruby-green-stones-short-haaram-one-gram-gold-jewellery-1-425x500.jpg" alt="">
+<p>price 700</p>
+        </div>
+        <div>
+            <img src="https://cdnmedia-breeze.vaibhavjewellers.com/media/catalog/product/cache/69e73e668f7bd7d908ce61f8ab11fca4/image/13959066f/22kt-gold-traditional-radha-krishna-antique-haram-124vg3826-124vg3826.jpg" alt="">
+<p>price 900</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".longhar img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+const paragraph = img.nextElementSibling;  
+const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

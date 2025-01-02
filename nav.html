@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        /* Basic styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        .nav_part1 a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .nav_part1 a:hover {
+            text-decoration: underline;
+        }
+
+        .search-container {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 5px;
+            font-size: 16px;
+            width: 70%;
+            max-width: 400px;
+        }
+
+        .cart img {
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            background-color: #fff;
+            height: 3px;
+            width: 25px;
+            margin: 4px 0;
+        }
+
+        .nav_part1 {
+            display: flex;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .nav_part1 {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .nav_part1 a {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav_part1.active {
+                display: flex;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const navParts = document.querySelectorAll('.nav_part1');
+            navParts.forEach(nav => nav.classList.toggle('active'));
+        }
+
+        function homecart() {
+            alert("Cart clicked");
+        }
+
+        function search() {
+            alert("Search submitted");
+        }
+
+        function filterList() {
+            const query = document.getElementById("search-bar").value.toLowerCase();
+            console.log("Filter triggered: " + query);
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav_part1">
+            <a href="#home">Home</a>
+            <a href="#section1">Products</a>
+        </div>
+        <div class="search-container">
+            <form role="search" onsubmit="search(); return false;">
+                <input type="search" id="search-bar" placeholder="Search here..." onkeyup="filterList()">
+            </form>
+        </div>
+        <div class="nav_part1">
+            <a href="#contact-us">Contact us</a>
+            <a href="#about-us">About us</a>
+        </div>
+        <div class="cart">
+            <img onclick="homecart()" src="./cart-shopping-fast-svgrepo-com.png" alt="cart" height="55">
+        </div>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</body>
+</html>

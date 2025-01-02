@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+
+        .pochampally img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="pochampally allsarees">
+        <div>
+            <img src="https://www.prashantisarees.com/cdn/shop/files/pochampally-silk-saree-pale-yellow-and-purple-with-allover-ikat-weaves-and-long-annam-zari-woven-border-prashanti-sarees-1.jpg?v=1703589281" alt="">
+<p>price 1000</p>
+        </div>
+        <div>
+            <img src="https://vannamayil.com/cdn/shop/files/pochampally-soft-silk-saree-v03449_2.jpg?v=1691852410&width=1445" alt="">
+<p>price 1200</p>
+        </div>
+        <div>
+            <img src="https://www.virajafashionista.com/cdn/shop/files/rn-image_picker_lib_temp_8a96860f-557d-4391-a116-2ef25f551e79.jpg?v=1724133568" alt="">
+<p>price 1200</p>
+        </div>
+        <div>
+            <img src="https://frombharat.com/storage/media/Dl3WWCfDwlL014CZtqtgf9PjR9xIvQQ3E86DZsPO.jpg" alt="">
+<p>price 900</p>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/KA/JT/QR/ANDROID-106117214/prod-20200526-0934357594623311341640924-jpg.jpg" alt="">
+<p>price 950</p>
+        </div>
+        <div>
+            <img src="https://www.tvisandbliss.com/images/thumbs/0007656_peacock-blue-and-royal-blue-pochampally-double-ikkat-patola-silk-saree_550.jpeg" alt="">
+<p>price 800</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".pochampally img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+const paragraph = img.nextElementSibling;  
+const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

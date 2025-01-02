@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .muggam img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class=" muggam allblouses">
+        <div>
+            <img src="https://5.imimg.com/data5/ANDROID/Default/2024/6/427579492/OZ/EG/BA/162854384/product-jpeg.jpg" alt="">
+<p>price 1550</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqeQqW49MWL0V7IBLrRqmop3L5pPPRbZK8Q&s" alt="">
+<p>price 3000</p>
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/7130VcW-C1L._AC_UY1100_.jpg" alt="">
+<p>price 950</p>
+        </div>
+        <div>
+    <img src="https://images.meesho.com/images/products/315861273/r7pwp_512.jpg" alt="">
+<p>price 900</p>
+        </div>
+        <div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQRpBmBOw-uDStZrYE4cpXQ5agLTKfYNLDUg&s" alt="">
+<p>price 2600</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYgAk15ZUS2qikIEdIvL81efA3_i4wWTPeaw&s" alt="">
+<p>price 1700</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".muggam img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+const paragraph = img.nextElementSibling;  
+const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

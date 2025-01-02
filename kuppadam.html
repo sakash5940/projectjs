@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .kuppadam img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="kuppadam allsarees">
+        <div>
+    <img src="https://www.soosi.co.in/cdn/shop/products/WhatsAppImage2021-11-03at19.34.59_3_1200x1200.jpg?v=1635953705" alt="">
+<p>price 1100</p>
+</div>
+<div>
+    <img src="https://m.media-amazon.com/images/I/51BbaNTviaL._AC_UY1100_.jpg" alt="">
+<p>price 1000</p>
+</div>
+<div>
+    <img src="https://i.pinimg.com/736x/9f/fe/ca/9ffecac037ee088e3061450086d865b7.jpg" alt="">
+<p>price 1500</p>
+</div>
+<div>
+    <img src="https://tiimg.tistatic.com/fp/1/007/585/pink-color-silk-saree-with-blue-color-border-chirala-kuppadam-pattu-sarees-539.jpg" alt="">
+<p>price 1600</p>
+</div>
+<div>
+    <img src="https://themaggamcollective.com/cdn/shop/products/image_c8915a2e-6d58-4d49-addd-12fdebc7b4c1_grande.heic?v=1674032713" alt="">
+<p>price 1800</p>
+</div>
+<div>
+    <img src="https://pink-wink.net/wp-content/uploads/2021/02/a9981974-a38f-45b7-89ea-8a2c042d62fe_500x500.jpg" alt="">
+<p>price 2000</p>
+</div>
+</div>
+<script>
+    document.querySelectorAll(".kuppadam img").forEach(img => {
+        img.addEventListener("click", () => {
+            const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+        });
+    });
+</script>
+</body>
+</html>

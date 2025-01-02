@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+<style>
+    .organza img:hover {
+        border-color: #007BFF;
+    }
+</style>
+</head>
+<body>
+    <div class="organza allsarees">
+        <div>
+<img src="https://monamaar.com/cdn/shop/files/WhatsAppImage2024-02-01at9.18.37PM_1_29d2b848-42bd-4f93-9514-dafa96c930a9.jpg?v=1706938095" alt="">
+            <p>price 900</p>
+        </div>
+        <div>
+            <img src="https://www.jollysilks.com/media/cache/834x0/catalog/product/s/t/std901000768_01_1_1712314787.webp" alt="">
+<p>price 950</p>
+        </div>
+        <div>
+            <img src="https://singhanias.in/cdn/shop/files/472105_1.jpg?v=1714826465&width=2666" alt="">
+<p>price 830</p>
+        </div>
+<div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9f2B50338S5aCkulx1zNNTnBvsdVt4jtKyM4PMfMmhaFZu8JA8bGCMyN1td6QUPpOMyo&usqp=CAU" alt="">
+<p>price 870</p>
+</div>
+<div>
+    <img src="https://www.koskii.com/cdn/shop/files/koskii-lavender-gotapatti-tissue-designer-saree-saus0032362_lavender_1_1080x.jpg?v=1695997398" alt="">
+<p>price 1000</p>
+</div>
+<div>
+    <img src="https://ethnicrace.com/wp-content/uploads/2024/03/Party-Wear-Ethnic-Designer-Organza-Silk-Saree-With-Rich-Pallu-For-Wedding-1.jpg" alt="">
+<p>price 980</p>
+</div>
+    </div>
+    <script>
+        document.querySelectorAll(".organza img").forEach(img => {
+        img.addEventListener("click", () => {
+        const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+    });
+});
+
+        
+    </script>
+</body>
+</html>

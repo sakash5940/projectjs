@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .rings img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="rings alljewellery">
+        <div>
+<img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/ring/w/r/2/6-1-ycswrg-822c-6-sl-ring-yellow-chimes-original-imagde4u9ygspshw.jpeg?q=90&crop=false" alt="">
+<p>price 600</p>
+        </div>
+        <div>
+<img src="https://cdn1.jewelxy.com/live/img/business_product/ATInDLGLvV_20220205145754.jpg" alt="">
+<p>price 800</p>
+        </div>
+        <div>
+<img src="https://kinclimg0.bluestone.com/f_jpg,c_scale,w_1024,q_80,b_rgb:f0f0f0/giproduct/BIPO0737R10_RAA18DIG4XXXXXXXX_ABCD00-BP-PICS-00001-1024-72073.png" alt="">
+<p>price 900</p>
+        </div>
+        <div>
+<img src="https://assets.ajio.com/medias/sys_master/root/20230518/OQ9T/64662c71d55b7d0c63c35d31/-473Wx593H-466166051-rosegold-MODEL.jpg" alt="">
+<p>price 850</p>
+        </div>
+        <div>
+<img src="https://d25g9z9s77rn4i.cloudfront.net/uploads/product/516/1663129635_c579bedd338462739ac4.png" alt="">
+<p>price 700</p>
+        </div>
+        <div>
+<img src="https://www.wholesalecovering.com/image/cache/catalog/Rings/rng394-buy-unique-artificial-diamond-ring-design-for-female-1-850x1000.jpg.webp" alt="">
+<p>price 650</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".rings img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

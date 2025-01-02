@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .bandhani img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="bandhani allsarees">
+<div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_VzXx-SIwbTvDx5Hznaa0TI7Ww_kEZ_KwQ&s" alt="">
+<p>price 1000</p>
+</div>
+<div>
+    <img src="https://www.bahuji.com/cdn/shop/files/1660556176.ST_Teen_Dani_Bandhej_Grey_And_Maroon.webp?v=1722879377" alt="">
+<p>price 1200</p>
+</div>
+<div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD5BAD6btgZ8F_u6OWhc2pmRTrMaWkSoxPvQ&s" alt="">
+<p>price 1100</p>
+</div>
+<div>
+    <img src="https://www.sareespalace.com/image/cache/data/silk-patch-border-multi-colour-bandhani-saree-219743-1000x1375.jpg" alt="">
+<p>price 1300</p>
+</div>
+<div>
+    <img src="https://dvanza.com/wp-content/uploads/Blue-Bandhani-Saree-With-Unstitched-Blouse-Piece-DVZ0003972.jpeg" alt="">
+<p>price 950</p>
+</div>
+<div>
+    <img src="https://dvanza.com/wp-content/uploads/Purple-Bandhani-Saree-With-Unstitched-Blouse-Piece-DVZ0003974.jpeg" alt="">
+<p>price 900</p>
+</div>
+    </div>
+    <script>
+        document.querySelectorAll(".bandhani img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

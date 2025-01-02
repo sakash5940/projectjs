@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .dharmavaram img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="dharmavaram allsarees">
+        <div>
+            <img src="https://lh4.googleusercontent.com/proxy/8uOTyk5smaW09rOK3T5uk6aSZkP8L2LVuoSfOdLjvpZxdhRSqHLGthquYNxDPQy2-ush1Wy4mHhh82Z-w2bej-KAkV_9" alt="">
+<p>price 750</p>
+        </div>
+        <div>
+            <img src="https://capellcouture.com/cdn/shop/files/57992EE8-9E8D-4FCF-92A1-D3E870482F42.jpg?v=1720855909" alt="">
+<p>price 900</p>
+        </div>
+        <div>
+            <img src="https://www.giheritage.com/uploads/product/dharmavaram-handloom-beautiful-tasar-silk-saree-h.jpg" alt="">
+<p>price 1100</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/sari/v/f/c/free-best-seller-bollywood-stylish-budget-designer-georgette-original-imagn5dr263ejh9e.jpeg?q=20&crop=false" alt="">
+<p>price 1300</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/sari/y/a/8/free-2-rani-opera-silk-saree-pure-cotton-sarees-for-summer-daily-original-imagpfcezggudbxs.jpeg?q=20&crop=false" alt="">
+<p>price 1400</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/720/864/xif0q/sari/a/p/k/free-chifon-silk-saree-sathiya-creation-unstitched-original-imagdh3ybge9fvt4.jpeg?q=60&crop=false" alt="">
+<p>price 1450</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".dharmavaram img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>

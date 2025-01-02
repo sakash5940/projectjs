@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .boatneck img:hover {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="boatneck allblouses">
+        <div>
+<img src="https://cdn.shopify.com/s/files/1/0412/0002/5751/files/56_a339db5b-b3aa-47c0-8487-f2257b90309b_600x600.jpg" alt="">
+<p>price 300</p>
+        </div>
+        <div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3eWQQS5GZcBGmtBsL9pBLurV4bcUtuhAP1LXOT9Pl4hfvBkvSYpNA4zGNao81yi8UZxE&usqp=CAU" alt="">
+<p>price 500</p>
+        </div>
+        <div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_CRw_P42TeGssxCU9wzNJ4n4Jb_iDBLPeBifwNcspUG0iJ55IN9dViuvpUgs3w2gdkV4&usqp=CAU" alt="">
+<p>price 450</p>
+        </div>
+        <div> 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhRccQTtNbExU55dMo2fV6PH_9JmbWFm19k33aFmYE5Fcs2d2SvmVs1KiFkk_K24UhxsQ&usqp=CAU" alt="">
+<p>price 500</p>
+        </div>
+        <div>
+<img src="https://dailybuyys.com/cdn/shop/files/WhatsAppImage2023-05-12at1.17.53PM_1_grande.jpg?v=1683892716" alt="">
+<p>price 600</p>
+        </div>
+        <div>
+<img src="https://i.pinimg.com/236x/77/2c/d4/772cd4f90bcd4333d047fb935fe88ca2.jpg" alt="">
+<p>price 600</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".boatneck img").forEach(img => {
+            img.addEventListener("click", () => {
+                const imgSrc = img.src;
+
+        const paragraph = img.nextElementSibling;  
+        const paragraphText = paragraph ? paragraph.textContent : ""; 
+
+        window.location.href = `product.html?image=${encodeURIComponent(imgSrc)}&description=${encodeURIComponent(paragraphText)}`;
+            });
+        });
+    </script>
+</body>
+</html>
